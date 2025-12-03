@@ -1,0 +1,21 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Datos de conexión -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bodega_app?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Asegúrate de poner el nombre completo del paquete -->
+        <mapping class="com.sistemabodega.model.Usuario"/>
+        <mapping class="com.sistemabodega.model.MovimientoBodega"/>
+        <mapping class="com.sistemabodega.model.Producto"/>
+        <mapping class="com.sistemabodega.model.Compra"/>
+        
+    </session-factory>
+</hibernate-configuration>
+
